@@ -1,8 +1,6 @@
 
 # Initialize the Board
-board = ["_", "_", "_", 
-         "_", "_", "_", 
-         "_", "_", "_"]
+board = 9*["_"]
 
 # Initialize the players and the respective sumbols
 player1 = {
