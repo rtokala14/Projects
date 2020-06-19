@@ -117,8 +117,5 @@ def set_players():
         return player1
     else:
         return player2
-
-
-
 play_game()
 
