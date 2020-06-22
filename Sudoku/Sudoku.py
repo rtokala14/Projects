@@ -1,8 +1,14 @@
+def BuildBoard():
+    """
+    Method to build the contents of the play board
+    using a text file.
 
+    Arguments:
+    None
 
-
-# Load the board
-def loadBoard():
+    Output:
+    Board - A list
+    """
     Board = []
 
     fileHandle = open("Board.txt", "r")
@@ -15,8 +21,21 @@ def loadBoard():
 
     return Board
 
-Board = loadBoard()
-for x in range(len(Board)):
-    for y in range(len(Board[0])):
-        print(Board[x][y], end=" ")
-    print()
+def FindEmptyCell(Board):
+    """
+    Method to find the next empty cell in the Board.
+
+    Arguments:
+    Board - A 9x9 List of numbers
+
+    Output:
+    Tuple(x, y) - index of row, column
+    """
+
+    for i in range(len(Board)):
+        for j in range(len(Board[0])):
+            if Board[i][j] == 0:
+                return (i,j)
+    return None
+
+
